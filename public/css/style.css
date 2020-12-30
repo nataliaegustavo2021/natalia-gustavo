@@ -1,0 +1,198 @@
+@font-face { font-family: "Beautiful Heart"; src: url('../assets/Beautiful\ Heart.ttf'); } 
+
+
+body{
+    font-family: 'Lato', 'sans-serif' !important;
+    color: #4b4b4b !important;
+    background-image: url("../assets/textura.png") !important;
+    background-repeat: repeat !important;
+    background-size: 25% !important;
+}
+
+h1{
+    font-family: 'Beautiful Heart', 'sans-serif' !important;
+    font-weight: 100 !important;
+    font-size: 400% !important;
+}
+
+h2{
+    font-family: 'Beautiful Heart', 'sans-serif' !important;
+    font-weight: 100 !important;
+    font-size: 50px !important;
+}
+
+section{
+    padding: 3%;
+}
+
+input:invalid:focus {
+    border: 1px solid red;
+}
+
+textarea:invalid:focus {
+    border: 1px solid red;
+}
+
+.container{
+    border: 0!important;
+}
+
+a{
+    color: #4b4b4b;
+    font-weight: 600;
+}
+a:hover{
+    color: #222222;
+    text-decoration: underline !;
+}
+
+.btn-xl {
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #d8d8e7;
+}
+
+.navbar-custom .navbar-brand {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #4b4b4b !important;
+}
+
+.cabecalho{
+    position: relative;
+}
+
+.img-total{
+    max-width: 100%; 
+    height:auto;
+}
+
+.img-parcial{
+    border-radius: 25px;
+}
+
+.img-arabesco{
+    max-width: 15%;
+}
+
+.img-icon{
+    max-width: 25%;
+}
+
+.img-icon-40{
+    max-width: 40%;
+}
+
+.txt-cabecalho{
+    position: absolute;
+    left: 5%;
+    top: 7em;
+}
+
+.bg-primary {
+    background-color: #d8d8e7 !important;
+}
+
+.bg-transparency {
+    background-color: rgb(208, 208, 223, 0.7) !important;
+    border-radius: 25px !important;
+    padding: 2%;
+}
+
+.btn-primary {
+    background-color: #d8d8e7;
+    border-color: #4b4b4b;
+    color: #4b4b4b;
+    padding: 0.8rem 2rem !important;
+    border-radius: 20px !important;
+    font-weight: 600;
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #525252 !important;
+    border-color: #525252 !important;
+    color: #d8d8e7 !important;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem #525252;
+}
+
+.btn-secondary {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+}
+
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+    background-color: #cc5500 !important;
+    border-color: #cc5500 !important;
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+}
+
+.margem {
+    margin: 1% !important;
+}
+
+.secao-pai {
+    overflow: hidden;
+    position: relative;
+}
+
+.secao-filho {
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.largura-50{
+    max-width: calc(50% - 15px);
+}
+
+.largura-30{
+    margin: 10px;
+}
+
+.espaco{
+    padding: 2%;
+}
+
+.espaco-direita{
+    padding: 0 15px 0 0;
+}
+
+.espaco-esquerda{
+    padding: 0 0 0 30px;
+}
+
+.rodape{
+    min-height: 20px;
+    max-width: 300px;
+    border-top: 1px solid #4b4b4b;
+    margin: 0 auto;
+}
+
+#inicio, #error, #sucess, #rsvp, #ondeficar{
+    margin-top: 4rem !important;
+}
