@@ -1,11 +1,15 @@
 function setHeightCerimonia() {
     var cerimoniaFoto = getHeight("cerimonia-foto");
-    setHeight("cerimonia-texto", cerimoniaFoto);
+    var cerimoniaTexto = getHeight("cerimonia-texto");
+    if(cerimoniaFoto > cerimoniaTexto)
+        setHeight("cerimonia-texto", cerimoniaFoto);
 };
 
 function setHeightOndeFicar(){
-    var ondeficar = getHeight("ondeficar-foto");
-    setHeight("ondeficar-texto", ondeficar);
+    var ondeficarFoto = getHeight("ondeficar-foto");
+    var ondeficarTexto = getHeight("ondeficar-texto");
+    if(ondeficarFoto > ondeficarTexto)
+        setHeight("ondeficar-texto", ondeficar);
 }
 
 function getHeight(element){
@@ -47,4 +51,30 @@ function validateFormRsvp(){
     if(document.getElementById("mensagem").ValidityState.valueMissing)
         return false;
     return true;
+}
+
+var countDownDate = new Date("Mar 7, 2021 11:30:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById("countdown").innerHTML = doubleDigit(days) + " : " + doubleDigit(hours) + " : "
+  + doubleDigit(minutes);
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+function doubleDigit(value){
+    if(value < 10){
+        return "0" + value;
+    }
+    return value;
 }

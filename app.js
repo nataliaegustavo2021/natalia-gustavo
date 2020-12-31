@@ -36,7 +36,7 @@ app.post('/mensagem', (req, res) => {
       + req.body.mensagem + "</p>"
   }
   
-  let emailnoivos = {
+  let emailNoivos = {
     from: 'Site Natália e Gustavo<nataliaegustavo2021@outlook.com>',
     to: 'nataliaegustavo2021@outlook.com',
     subject: 'Mensagem recebida',
@@ -50,9 +50,9 @@ app.post('/mensagem', (req, res) => {
     }]
   }
 
-  transporter.sendMail(emailDestinatario, (err, result)=>{
+  transporter.sendMail(emailNoivos, (err, result)=>{
     if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
-    transporter.sendMail(emailnoivos, (err, result)=>{
+    transporter.sendMail(emailDestinatario, (err, result)=>{
       if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
       res.sendFile(path.join(__dirname,'./public/success.html'));
     })
@@ -92,7 +92,7 @@ app.post('/rsvp', (req, res) => {
       + req.body.mensagem + "</p>"
   }
   
-  let emailnoivos = {
+  let emailNoivos = {
     from: 'Site Natália e Gustavo<nataliaegustavo2021@outlook.com>',
     to: 'nataliaegustavo2021@outlook.com',
     subject: 'Confirmação de convidados',
@@ -110,9 +110,9 @@ app.post('/rsvp', (req, res) => {
       }]
   }
 
-  transporter.sendMail(emailDestinatario, (err, result)=>{
+  transporter.sendMail(emailNoivos, (err, result)=>{
     if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
-    transporter.sendMail(emailnoivos, (err, result)=>{
+    transporter.sendMail(emailDestinatario, (err, result)=>{
       if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
       res.sendFile(path.join(__dirname,'./public/success.html'));
     })
