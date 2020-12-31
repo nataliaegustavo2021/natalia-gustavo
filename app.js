@@ -54,7 +54,7 @@ app.post('/mensagem', (req, res) => {
     if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
     transporter.sendMail(emailnoivos, (err, result)=>{
       if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
-      res.sendFile(path.join(__dirname,'./public/sucess.html'));
+      res.sendFile(path.join(__dirname,'./public/success.html'));
     })
   })
 })
@@ -114,7 +114,7 @@ app.post('/rsvp', (req, res) => {
     if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
     transporter.sendMail(emailnoivos, (err, result)=>{
       if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
-      res.sendFile(path.join(__dirname,'./public/sucess.html'));
+      res.sendFile(path.join(__dirname,'./public/success.html'));
     })
   })
 })

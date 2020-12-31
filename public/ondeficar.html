@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/script.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <title>Natália e Gustavo</title>
 </head>
-<body>
+<body onload="setHeightOndeFicar()">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
@@ -41,11 +42,11 @@
     </nav>
 
     <section id="ondeficar">
-          <div class="row align-items-center secao-pai">
-            <div class="col-sm-6 ">
+          <div class="row align-items-center">
+            <div id="ondeficar-foto" class="col-lg">
                 <img class="img-fluid img-parcial" src="./assets/IMG_Onde_ficar.jpg" alt="">
             </div>
-            <div class="col-sm-6 bg-transparency text-center secao-filho largura-50">
+            <div id="ondeficar-texto" class="col-lg bg-transparency text-center">
                 <img src="assets/ico_onde_ficar.svg" class="img-icon espaco">
                 <h2 class="display-4 espaco">Sugestões de hospedagem</h2>
                 <p class="espaco"><a target="_blank" href="https://domotto.com.br/">

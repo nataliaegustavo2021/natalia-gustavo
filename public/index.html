@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <title>Natália e Gustavo</title>
 </head>
-<body>
+<body onload="setHeightCerimonia()">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
@@ -68,10 +68,10 @@
 
     <section id="cerimonia">
       <div class="row align-items-center">
-        <div class="col-lg">
+        <div id="cerimonia-foto" class="col-lg">
             <img class="img-fluid img-parcial" src="./assets/IMG_Cerimonia.jpg" alt="">
         </div>
-        <div class="col-lg bg-transparency text-center">
+        <div id="cerimonia-texto" class="col-lg bg-transparency text-center">
             <img src="assets/ico_cerimonia.svg" class="img-icon espaco">
             <h2 class="display-4 espaco">Cerimônia</h2>
             <p class="espaco"><b>Domingo, 07 de março de 2021, às 11:30H</b></p>
@@ -118,17 +118,17 @@
 
     <section id="listapresentes">
       <div class="row align-items-center text center">
-        <div class="col-lg bg-transparency text-center largura-30">
+        <div class="col-lg bg-transparency text-center padding-transparency">
             <img src="assets/ico_onde_ficar.svg" class="img-icon-40 espaco">
             <h2 class="display-4 espaco">Onde ficar</h2>
             <a class="btn btn-primary espaco" href="ondeficar.html">Sugestões de hospedagem</a>
         </div>
-        <div class="col-lg bg-transparency text-center largura-30">
+        <div class="col-lg bg-transparency text-center padding-transparency">
           <img src="assets/ico_rsvp.svg" class="img-icon-40 espaco">
           <h2 class="display-4 espaco">R.S.V.P.</h2>
           <a class="btn btn-primary espaco" href="rsvp.html">Confirme sua presença</a>
         </div>
-        <div class="col-lg bg-transparency text-center largura-30">
+        <div class="col-lg bg-transparency text-center padding-transparency">
           <img src="assets/ico_presentes.svg" class="img-icon-40 espaco">
           <h2 class="display-4 espaco">Lista de presentes</h2>
           <a class="btn btn-primary espaco" href="index.html">Caso deseje nos presentear</a>
