@@ -21,9 +21,24 @@ function setHeight(element, value){
     document.getElementById(element).style.height = value;
 }
 
-function validateFormMensagem(){
+function validateFormMensagem(){        
+    var x = document.forms["mensagemform"]["nome"].value;
+    if (x == "") {
+        alert("O campo Nome deve ser preenchido!");
+        return false;
+    }
+    x = document.forms["mensagemform"]["email"].value;
+    if (x == "") {
+        alert("O campo E-mail ou Whatsapp deve ser preenchido!");
+        return false;
+    }
+    x = document.forms["mensagemform"]["mensagem"].value;
+    if (x == "") {
+        alert("O campo Mensagem deve ser preenchido!");
+        return false;
+    }
+    
     if(document.getElementById("email").ValidityState.valueMissing){
-        console.log("false");
         return false;
     }
     if(document.getElementById("email").ValidityState.typeMismatch)
@@ -32,10 +47,43 @@ function validateFormMensagem(){
         return false;
     if(document.getElementById("mensagem").ValidityState.valueMissing)
         return false;
+
     return true;
 }
 
 function validateFormRsvp(){
+    var x = document.forms["rsvpform"]["nome"].value;
+    if (x == "") {
+        alert("O campo Nome deve ser preenchido!");
+        return false;
+    }
+    x = document.forms["rsvpform"]["email"].value;
+    if( x == "" || x.indexOf('@') == -1 || x.indexOf('.') == -1 || x.length < 3 )
+	{
+	  alert( "Por favor, informe um e-mail válido!" );
+	  return false;
+	}
+    x = document.forms["rsvpform"]["mensagem"].value;
+    if (x == "") {
+        alert("O campo Nome e sobrenome dos convidados confirmados deve ser preenchido!");
+        return false;
+    }
+    x = document.forms["rsvpform"]["sobrenome"].value;
+    if (x == "") {
+        alert("O campo Sobrenome deve ser preenchido!");
+        return false;
+    }
+    x = document.forms["rsvpform"]["telefone"].value;
+    if (x == "" || x.length < 10) {
+        alert("Por favor, informe um telefone válido!");
+        return false;
+    }
+    x = document.forms["rsvpform"]["quantidade"].value;
+    if (x == "") {
+        alert("O campo Nº de convidados deve ser preenchido!");
+        return false;
+    }
+
     if(document.getElementById("email").ValidityState.valueMissing)
         return false;
     if(document.getElementById("email").ValidityState.typeMismatch)
