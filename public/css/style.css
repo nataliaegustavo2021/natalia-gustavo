@@ -38,6 +38,12 @@ body{
         text-align: center !important;
         text-shadow: 0.1em 0.1em 0.2em #000;
     }
+    .navbar-custom .navbar-nav .nav-item .nav-link {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: #3d5562 !important;
+    }
 }
 @media (min-width: 768px) {
     h1 { 
@@ -52,6 +58,12 @@ body{
         top: 20%;
         text-align: center !important;
         text-shadow: 0.1em 0.1em 0.2em #000;
+    }
+    .navbar-custom .navbar-nav .nav-item .nav-link {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: #3d5562 !important;
     }
 }
 @media (min-width: 992px) {
@@ -68,6 +80,12 @@ body{
         text-align: center !important;
         text-shadow: 0.1em 0.1em 0.2em #000;
     }
+    .navbar-custom .navbar-nav .nav-item .nav-link {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: #3d5562 !important;
+    }
 }
 @media (min-width: 1200px) {
     h1 { 
@@ -82,6 +100,12 @@ body{
         top: 20%;
         text-align: center !important;
         text-shadow: 0.1em 0.1em 0.2em #000;
+    }
+    .navbar-custom .navbar-nav .nav-item .nav-link {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: #3d5562 !important;
     }
 }
 
@@ -157,16 +181,9 @@ a:hover{
 }
 
 .navbar-custom .navbar-brand {
-    font-size: 1rem;
+    font-size: 14px;
     letter-spacing: 0.1rem;
     font-weight: 700;
-}
-
-.navbar-custom .navbar-nav .nav-item .nav-link {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-    color: #3d5562 !important;
 }
 
 .cabecalho{
