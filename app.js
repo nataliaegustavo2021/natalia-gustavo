@@ -65,11 +65,11 @@ app.post('/rsvp', (req, res) => {
   let msg = req.body.mensagem.replace(/(\r\n|\n|\r)/gm, " ");
 
   let cer;
-  if(req.body.cerimonia) cer = "Sim"
+  if(!!req.body.cerimonia) cer = "Sim"
   else cer = "Não" 
-  let rec;
-  if(req.body.recepcao) rec = "Sim"
-  else rec = "Não" 
+  /*let rec;
+  if(!!req.body.recepcao) rec = "Sim"
+  else rec = "Não" */
   
 
   let arquivo = req.body.nome + ";"
@@ -78,7 +78,7 @@ app.post('/rsvp', (req, res) => {
   + req.body.telefone + ";"
   + req.body.quantidade + ";"
   + cer + ";"
-  + rec + ";"
+  //+ rec + ";"
   + msg + "\n"
 
   fs.appendFileSync('./file/rsvp.csv', arquivo);
@@ -104,8 +104,8 @@ app.post('/rsvp', (req, res) => {
       + req.body.email + "</p>Telefone: "
       + req.body.telefone + "</p><p>Número de pessoas confirmadas: "
       + req.body.quantidade + "</p><p>Cerimônia: "
-      + cer + "</p><p>Recepção: "
-      + rec + "</p><p>Pessoas confirmadas: "
+      + cer + /*"</p><p>Recepção: "
+      + rec +*/ "</p><p>Pessoas confirmadas: "
       + req.body.mensagem + "</p>",
       attachments: [{
         path: './file/rsvp.csv'
@@ -118,7 +118,7 @@ app.post('/rsvp', (req, res) => {
   })
 
   transporter.sendMail(emailNoivos, (err, result)=>{
-    if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
+    if(err) console.log(result);
     res.sendFile(path.join(__dirname,'./public/success.html'));
   })
 
