@@ -67,10 +67,6 @@ app.post('/rsvp', (req, res) => {
   let cer;
   if(!!req.body.cerimonia) cer = "Sim"
   else cer = "Não" 
-  /*let rec;
-  if(!!req.body.recepcao) rec = "Sim"
-  else rec = "Não" */
-  
 
   let arquivo = req.body.nome + ";"
   + req.body.sobrenome + ";"
@@ -78,7 +74,6 @@ app.post('/rsvp', (req, res) => {
   + req.body.telefone + ";"
   + req.body.quantidade + ";"
   + cer + ";"
-  //+ rec + ";"
   + msg + "\n"
 
   fs.appendFileSync('./file/rsvp.csv', arquivo);
@@ -104,8 +99,7 @@ app.post('/rsvp', (req, res) => {
       + req.body.email + "</p>Telefone: "
       + req.body.telefone + "</p><p>Número de pessoas confirmadas: "
       + req.body.quantidade + "</p><p>Cerimônia: "
-      + cer + /*"</p><p>Recepção: "
-      + rec +*/ "</p><p>Pessoas confirmadas: "
+      + cer + "</p><p>Pessoas confirmadas: "
       + req.body.mensagem + "</p>",
       attachments: [{
         path: './file/rsvp.csv'
