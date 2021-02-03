@@ -56,7 +56,7 @@ app.post('/mensagem', (req, res) => {
   })
 
   transporter.sendMail(emailNoivos, (err, result)=>{
-    if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
+    if(err) res.sendFile(err);
     res.sendFile(path.join(__dirname,'./public/success.html'));
   })
 })
