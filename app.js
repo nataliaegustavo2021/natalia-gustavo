@@ -118,7 +118,7 @@ app.post('/rsvp', (req, res) => {
   })
 
   transporter.sendMail(emailNoivos, (err, result)=>{
-    if(err) console.log(result);
+    if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
     res.sendFile(path.join(__dirname,'./public/success.html'));
   })
 
