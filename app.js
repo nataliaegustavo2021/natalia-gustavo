@@ -52,12 +52,12 @@ app.post('/mensagem', (req, res) => {
   
   transporter.sendMail(emailDestinatario, (err, result)=>{
     if(err) console.log("Erro ao enviar email ao destinatário");
-    console.log("Email enviado ao destinatário")
+    else console.log("Email enviado ao destinatário")
   })
 
   transporter.sendMail(emailNoivos, (err, result)=>{
-    if(err) res.sendFile(err);
-    res.sendFile(path.join(__dirname,'./public/success.html'));
+    if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
+    else res.sendFile(path.join(__dirname,'./public/success.html'));
   })
 })
 
@@ -107,13 +107,13 @@ app.post('/rsvp', (req, res) => {
   }
 
   transporter.sendMail(emailDestinatario, (err, result)=>{
-    if(err) console.log("Erro ao enviar email ao destinatário");
-    console.log("Email enviado ao destinatário")
+    if(err) console.log("Erro ao enviar email ao destinatário: " + err);
+    else console.log("Email enviado ao destinatário")
   })
 
   transporter.sendMail(emailNoivos, (err, result)=>{
     if(err) res.sendFile(path.join(__dirname,'./public/error.html'));
-    res.sendFile(path.join(__dirname,'./public/success.html'));
+    else res.sendFile(path.join(__dirname,'./public/success.html'));
   })
 
 })
